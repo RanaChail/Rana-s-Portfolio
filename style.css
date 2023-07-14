@@ -432,7 +432,7 @@ span{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 0;
     height: 100%;
     background: var(--second-bg-color);
     z-index: -1;
@@ -440,7 +440,7 @@ span{
 }
 
 .skills-box .skills-content:hover::before{
-    width: 0;
+    width: 100%;
 }
 
 .skills-content .progress{
