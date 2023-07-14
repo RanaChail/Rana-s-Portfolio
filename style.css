@@ -14,8 +14,8 @@
     --bg-color: #03080c;
     --second-bg-color: #061721;
     --text-color: white;
-    --main-color: #3f65d6;
-    --second-main-color:#8b6eea;
+    --main-color: #4b86d3;
+    --second-main-color:#9064d6;
 }
 
 html{
@@ -94,7 +94,7 @@ section{
 }
 
 .home-content h1 span{
-    color: #967de8;
+    color: var(--second-main-color);
 }
 
 .home-content .text-animate{
@@ -392,3 +392,123 @@ span{
     font-size: 1.5rem;
     padding-top: .5rem;
 }
+
+
+/* Skills Section  */
+
+.skills{
+    min-height: auto;
+    padding-bottom: 7rem;
+    background: var(--bg-color);
+}
+
+.skills .skills-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.skills-row .skills-column{
+    flex: 1 1 40rem;
+}
+
+.skills-column .title{
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem;
+    font-weight: 700;
+}
+
+.skills-box .skills-content{
+    position: relative;
+    border: .2rem solid var(--main-color);
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.skills-box .skills-content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.skills-box .skills-content:hover::before{
+    width: 0;
+}
+
+.skills-content .progress{
+    padding: 1rem 0;
+}
+
+.skills-content .progress h3{
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills-content .progress h3 span{
+    color: var(--main-color);
+}
+
+.skills-content .progress .bar{
+    height: 2.5rem;
+    border-radius: 1rem;
+    border: .2rem solid var(--main-color);
+    padding: .5rem;
+    margin: 1rem 0;
+}
+
+.skills-content .progress .bar span{
+    display: block;
+    height: 100%;
+    border-radius: .5rem;
+    background: var(--main-color);
+}
+
+/* This is for Coding Skills bar */
+.skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span{/*C++*/
+    width: 60%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span{/*Java*/
+    width: 75%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span{/*HTML*/
+    width: 80%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span{/*CSS*/
+    width: 70%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(5) .bar span{/*JavaScripts*/
+    width: 85%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(6) .bar span{/*Python*/
+    width: 90%;
+}
+
+/* This is for Professional Skills bar */
+.skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span{/*Web Development*/
+    width: 80%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span{/*Front-End Design*/
+    width: 60%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span{/*Welding*/
+    width: 90%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span{/*Autocad*/
+    width: 70%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(5) .bar span{/*Video Editing*/
+    width: 60%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(6) .bar span{/*Phtography*/
+    width: 50%;
+}
+
