@@ -48,9 +48,14 @@ body{
 }
 
 .logo{
+    position: relative;
     font-size: 2.5rem;
     color: var(--text-color);
     font-weight: 700;
+}
+
+.navbar{
+    position: relative;
 }
 
 .navbar a{
@@ -291,6 +296,7 @@ span{
     border-left: .2rem solid var(--second-main-color);
     border-bottom: .2rem solid var(--bg-color);
     border-right: .2rem solid var(--second-main-color);
+    animation: aboutSpinner 8s linear infinite;
 }
 
 .about-content{
@@ -722,5 +728,77 @@ span{
         pointer-events: none;
         background: var(--bg-color);
         opacity: .6;
+    }
+}
+
+@media (max-width:520px){
+    html{
+        font-size: 50%;
+    }
+
+    .home-content h1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-social{
+        width: 160px;
+    }
+
+    .home-social a{
+        height: 36px;
+        width: 36px;
+    }
+}
+
+@media (max-width: 460px){
+    .home-content h1{
+        font-size: 5.2rem;
+    }
+
+    .education {
+        padding: 10rem 5% 5rem 5%;
+    }
+
+    .contact form .input-box .input-field{
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer p{
+        margin-top: 2rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 371px){
+    .home{
+        justify-content: center;
+    }
+
+    .home-content{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-content p{
+        padding: 2%;
+    }
+}
+
+/* Animation CSS */
+
+@keyframes aboutSpinner {
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 }
