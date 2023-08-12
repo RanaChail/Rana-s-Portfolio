@@ -28,6 +28,15 @@ body{
     color: var(--text-color);
 }
 
+body::-webkit-scrollbar{
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: rgb(55, 55, 55);
+    border-radius: 10px;
+}
+
 .header{
     position: fixed;
     top: 0;
